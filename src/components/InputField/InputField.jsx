@@ -2,10 +2,19 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import s from './InputField.module.css';
 
-const InputField = ({children, ...other}) => {
-  const {label, value, onChange, type, name, pattern, title, required = false} = other;
+const InputField = ({ children, ...other }) => {
+  const {
+    label,
+    value,
+    onChange,
+    type,
+    name,
+    pattern,
+    title,
+    required = false,
+  } = other;
   return (
-    <p className={s.fieldWrapper}>
+    <div className={s.fieldWrapper}>
       <label className={s.field}>
         <span className={s.label}>{label}</span>
         <input
@@ -20,7 +29,7 @@ const InputField = ({children, ...other}) => {
         />
         {children}
       </label>
-    </p>
+    </div>
   );
 };
 
