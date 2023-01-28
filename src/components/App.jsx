@@ -23,8 +23,8 @@ export default class App extends Component {
   };
 
   deleteItem = deletedId => {
-    this.setState(p => ({
-      contacts: p.contacts.filter(({ id }) => id !== deletedId),
+    this.setState(({ contacts }) => ({
+      contacts: contacts.filter(({ id }) => id !== deletedId),
     }));
   };
 
